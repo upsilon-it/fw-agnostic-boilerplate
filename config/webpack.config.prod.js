@@ -9,10 +9,7 @@ const paths = require('./paths');
 module.exports = {
   bail: true,
 
-  entry: {
-    main: [paths.appIndexJs],
-    vendor: [],
-  },
+  entry: [paths.appIndexJs],
 
   output: {
     path: paths.appBuild,
@@ -59,9 +56,9 @@ module.exports = {
         minifyURLs: true,
       },
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'dist/js/[name].[chunkhash:8].js',
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   filename: 'dist/js/[name].[chunkhash:8].js',
+    // }),
   ],
 };
