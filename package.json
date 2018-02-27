@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "gulp & webpack-dev-server --config config/webpack.config.dev.js",
+    "build": "gulp build && webpack --config config/webpack.config.prod.js",
     "test": "echo \"You are lucky: no tests found\"",
     "lint": "lint-staged"
   },
