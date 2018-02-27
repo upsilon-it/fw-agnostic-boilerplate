@@ -29,6 +29,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "gulp": "^4.0.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "github:webpack-contrib/html-webpack-plugin",
     "husky": "^0.15.0-rc.8",
     "knockout": "^3.5.0-beta",
