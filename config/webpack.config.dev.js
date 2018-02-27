@@ -28,6 +28,17 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel-loader'],
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attrs: false,
+            },
+          },
+        ],
+      },
     ],
   },
 
