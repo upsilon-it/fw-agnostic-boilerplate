@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Knockout-2.2.1" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="Knockout" />
+      <option name="frameworkVersion" value="2.2.1" />
+      <sourceFilesUrls>
+        <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.aspnetcdn.com_ajax_knockout_knockout-2.2.1.debug.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.aspnetcdn.com_ajax_knockout_knockout-2.2.1.debug.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

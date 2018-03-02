@@ -1,0 +1,8 @@
+<span data-bind="text: name"></span>
+<div data-bind="foreach: items">
+  <food-section-item
+    params="productName: productName,
+            price: price,
+            composition: composition">
+  </food-section-item>
+</div>

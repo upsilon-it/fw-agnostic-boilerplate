@@ -1,7 +1,7 @@
-import viewModel from './component';
+import ViewModel from './component';
 import template from './template.html';
 
 export default {
-  viewModel,
+  ViewModel,
   template,
 };
