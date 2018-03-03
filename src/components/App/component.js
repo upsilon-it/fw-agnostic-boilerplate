@@ -6,17 +6,17 @@ const sections = ko.observableArray([
       {
         productName: 'Греческий',
         price: '100500',
-        composition: 'Жадина-говядина',
+        composition: 'Говядина',
       },
       {
         productName: 'Шуба',
         price: '100500',
-        composition: 'Жадина-говядина',
+        composition: 'Говядина',
       },
       {
         productName: 'Оливье',
         price: '100500',
-        composition: 'Жадина-говядина',
+        composition: 'Говядина',
       },
     ],
   },

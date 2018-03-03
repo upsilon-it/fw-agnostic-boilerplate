@@ -1,7 +1,5 @@
-import ViewModel from './component';
+import viewModel from './component';
 import template from './template.html';
+import './styles.less';
 
-export default {
-  ViewModel,
-  template,
-};
+export default { viewModel, template };
