@@ -5,9 +5,9 @@
       <div data-bind="foreach: items">
         <div class="food-section-component__row">
           <food-section-item
-            params="productName: productName,
-                    price: price,
-                    composition: composition">
+            params="product: $data,
+                    orderItem: $component.orderItem,
+                    unorderItem: $component.unorderItem">
           </food-section-item>
         </div>
       </div>

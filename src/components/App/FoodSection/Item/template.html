@@ -1,5 +1,22 @@
 <div class="food-section-item">
-  <div class="food-section-item__line-item food-section-item__line-item_heading" data-bind="text: productName"></div>
-  <div class="food-section-item__line-item" data-bind="text: price"></div>
-  <div class="food-section-item__line-item" data-bind="text: composition"></div>
+  <div class="food-section-item__content">
+    <div class="food-section-item__line-item food-section-item__line-item_heading" data-bind="text: product.name"></div>
+    <div class="food-section-item__line-item" data-bind="text: product.price"></div>
+    <div class="food-section-item__line-item" data-bind="text: product.composition"></div>
+  </div>
+  <div class="food-section-item__actions">
+    <!-- ko if: product.order -->
+      <div data-bind="text: product.order.count" class="food-section-item__counter"></div>
+    <!-- /ko -->
+    <div class="food-section-item__buttons-wrapper">
+      <!-- ko if: product.order -->
+        <button data-bind="click: unorderItem.bind($component)" type="button" class="food-section-item__btn food-section-item__btn_remove btn btn-outline-dark">
+            <i data-bind="icon: { name: 'minus' }"></i>
+        </button>
+      <!-- /ko -->
+      <button data-bind="click: orderItem.bind($component)" type="button" class="food-section-item__btn btn btn-outline-dark">
+        <i data-bind="icon: { name: 'plus' }"></i>
+      </button>
+    </div>
+  </div>
 </div>

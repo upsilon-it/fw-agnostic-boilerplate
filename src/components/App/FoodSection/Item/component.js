@@ -1,8 +1,8 @@
 class Item {
-  constructor({ productName, price, composition }) {
-    this.productName = productName;
-    this.price = price;
-    this.composition = composition;
+  constructor({ product, orderItem, unorderItem }) {
+    this.product = product;
+    this.orderItem = () => orderItem(this.product);
+    this.unorderItem = () => unorderItem(this.product);
   }
 }
 

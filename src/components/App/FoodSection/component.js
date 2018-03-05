@@ -1,14 +1,18 @@
 import ko from 'knockout';
 
 class FoodSection {
-  constructor({ name, items }) {
-    this.name = name;
-    this.items = items;
+  constructor({ section, orderItem, unorderItem }) {
+    this.name = section.name;
+    this.items = section.items;
     this.isColapsed = ko.observable(false);
+    this.orderItem = (...args) => orderItem(...args);
+    this.unorderItem = (...args) => unorderItem(...args);
   }
 
   toggleCollapse() {
-    this.isColapsed(!this.isColapsed());
+    const nextState = !this.isColapsed();
+
+    this.isColapsed(nextState);
   }
 }
 
