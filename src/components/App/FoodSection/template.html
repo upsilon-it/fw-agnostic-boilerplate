@@ -1,0 +1,16 @@
+<div class="food-section-component">
+  <div class="food-section-component__header" data-bind="text: name, click: toggleCollapse"></div>
+  <div data-bind="collapse: isColapsed">
+    <div class="food-section-component__body">
+      <div data-bind="foreach: items">
+        <div class="food-section-component__row">
+          <food-section-item
+            params="product: $data,
+                    orderItem: $component.orderItem,
+                    unorderItem: $component.unorderItem">
+          </food-section-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

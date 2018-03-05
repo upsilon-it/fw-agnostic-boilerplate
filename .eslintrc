@@ -1,11 +1,15 @@
 {
   "extends": ["@exeto/eslint-config/node", "prettier"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "class-property"],
   "env": {
     "node": true,
   },
+  "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": "error"
+  },
+  "parserOptions": {
+    "sourceType": "module"
   },
   "overrides": [
      {

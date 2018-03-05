@@ -1,6 +1,22 @@
-<span data-bind="text: name"></span>
-
-<div data-bind='component: {
-  name: "item",
-  params: { content: "Hello, World" }
-}'></div>
+<div class="app">
+  <div class="container app__header">
+    <div class="row">
+      <div class="col-md-6">
+        <input data-bind="datepicker: { value: activeDate, changeDate: changeDate.bind($component) }" class="form-control">
+      </div>
+      <!-- ko if: price -->
+        <div class="col-md-6">
+          <a data-bind="text: priceView" href="#" class="app__summary-badge badge badge-danger"></a>
+          <button data-bind="click: makeOrder.bind($component)" type="button" class="btn btn-success">Сделать заказ</button>
+        </div>
+      <!-- /ko -->
+    </div>
+  </div>
+  <div data-bind="foreach: sectionItems">
+    <food-section
+      params="section: $data,
+              orderItem: $component.orderItem.bind($component),
+              unorderItem: $component.unorderItem.bind($component),">
+    </food-section>
+  </div>
+</div>
